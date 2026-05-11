@@ -14,3 +14,24 @@ describe "Tests de Tito" {
     assert.equals(10, tito.dosisConsumida())
   }
 }
+test "Tito toma whisky" {
+
+  tito.consumir(10, whisky)
+
+  assert.equals(whisky, tito.sustanciaActual())
+  assert.equals(10, tito.dosisConsumida())
+}
+
+test "Rendimiento whisky" {
+
+  assert.equals(0.9 ** 10,
+    whisky.rendimientoQueOtorga(10))
+}
+test "Licuado de frutas"{
+  licuadoDeFrutas.agregarNutrientes(10)
+  licuadoDeFrutas.agregarNutrientes(20)
+
+  assert.equals(30, 
+    licuadoDeFrutas.rendimientoQueOtorga(1000))
+
+}
